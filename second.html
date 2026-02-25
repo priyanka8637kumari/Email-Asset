@@ -1,167 +1,289 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Welcome to Swirl</title>
+  <meta charset="UTF-8">
+  <title>Welcome to Swirl</title>
 </head>
 
-<body style="margin:0; padding:0; background:#ffffff; font-family: Arial, Helvetica, sans-serif;">
+<body style="margin:0; padding:0; background:#ffffff; font-family: Inter, Arial, Helvetica, sans-serif;">
 
 <table width="100%" cellpadding="0" cellspacing="0" border="0" align="center">
-<tr>
-<td align="center">
+  <tr>
+    <td align="center">
 
-<!-- MAIN CONTAINER -->
-<table width="600" cellpadding="0" cellspacing="0" border="0" style="background:#ffffff;">
+      <!-- MAIN CONTAINER (600px like Figma) -->
+      <table width="600" cellpadding="0" cellspacing="0" border="0" style="background:#ffffff;">
 
-<!-- TOP GRADIENT SECTION -->
-<tr>
-<td align="center" style="background: linear-gradient(180deg, #A6C5C9 0%, #ffffff 100%); padding:40px 20px 20px 20px;">
+        <!-- TOP GRADIENT SECTION (height ~302px) -->
+        <tr>
+          <td align="center" style="background: linear-gradient(360deg, #ffffff 13%, #A6C5C9 100%); padding:40px 20px 0 20px;">
 
-<img src="https://framerusercontent.com/images/Mrf6vxBqiuIVPmTaKFeR631ZfY.png" width="80" alt="Swirl" style="display:block; margin-bottom:20px;">
+            <!-- Swirl wordmark placeholder bar at top center -->
+            <table cellpadding="0" cellspacing="0" border="0" style="margin-bottom:15px;">
+              <tr>
+                <td>
+                  <!-- In Figma this is the small black bar; replace with logo image when available -->
+                  <img src="https://framerusercontent.com/images/Mrf6vxBqiuIVPmTaKFeR631ZfY.png"
+                 width="80" alt="Swirl"
+                 style="display:block; margin-bottom:35px;">
+                </td>
+              </tr>
+            </table>
 
-<h1 style="margin:0; font-size:30px; line-height:35px; color:#171917;">
-Welcome to Swirl!
-</h1>
+           
 
-<p style="margin:15px 0 0 0; font-size:14px; line-height:21px; color:#171917;">
-Start drinking what <strong>you</strong> love, not what everyone else rates.
-</p>
+            <!-- Heading + subcopy (413px wide like Figma) -->
+            <table width="413" cellpadding="0" cellspacing="0" border="0" style="text-align:center;">
+              <tr>
+                <td style="font-family: 'Recoleta', Georgia, 'Times New Roman', serif; font-size:30px; line-height:35px; color:#171917; font-weight:500; padding-bottom:11px;">
+                  Welcome to Swirl!
+                </td>
+              </tr>
+              <tr>
+                <td style="font-size:14px; line-height:21px; color:#171917;">
+                  Start drinking what <strong style="font-weight:700;">you</strong> love, not what <br>everyone else rates.
+                </td>
+              </tr>
+            </table>
 
-</td>
-</tr>
+          </td>
+        </tr>
 
-<!-- PHONE IMAGE -->
-<tr>
-<td align="center" style="padding:30px 20px;">
-<img src="https://YOUR-PHONE-IMAGE.png" width="160" style="border-radius:15px; display:block;">
-</td>
-</tr>
+        <!-- PHONE IMAGE (positioned roughly like Figma) -->
+        <tr>
+          <td align="center" style="padding:0 20px;">
+            <img src="https://framerusercontent.com/images/EIOhVVMAjvwlrTLqoZGzBU8ys.png?width=287&height=475"
+                
+                 style="border-radius:15px; display:block;">
+          </td>
+        </tr>
 
-<!-- PRIMARY CTA -->
-<tr>
-<td align="center" style="padding-bottom:40px;">
-<a href="https://YOUR-APP-LINK.com"
-style="background:#171917; color:#ffffff; text-decoration:none; padding:14px 30px; border-radius:30px; font-size:16px; font-weight:bold; display:inline-block;">
-Scan your first bottle
-</a>
-</td>
-</tr>
+        <!-- PRIMARY CTA (Scan your first bottle) -->
+        <tr>
+          <td align="center" style="padding:0 20px 28px 20px;">
+            <a href="https://YOUR-APP-LINK.com"
+               style="background:#171917; color:#ffffff; text-decoration:none; padding:15px 34px; border-radius:30px; font-size:16px; font-weight:700; display:inline-block; font-family: Inter, Arial, Helvetica, sans-serif;">
+              Scan your first bottle
+            </a>
+          </td>
+        </tr>
 
-<!-- FEATURE BLOCK 1 -->
-<tr>
-<td style="padding:10px 20px;">
-<table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#FBFBFB; border-radius:10px;">
-<tr>
-<td width="120" style="padding:15px;">
-<img src="https://YOUR-IMAGE-1.png" width="100" style="border-radius:5px;">
-</td>
-<td style="padding:15px;">
-<h3 style="margin:0; font-size:20px; color:#171917;">
-Scan or type a wine label
-</h3>
-<p style="margin:8px 0 0 0; font-size:12px; line-height:18px; color:#171917;">
-Find any wine instantly. Have the label? Take a photo. Don’t? Type the info you have and we’ll do the rest.
-</p>
-</td>
-</tr>
-</table>
-</td>
-</tr>
+        <!-- FEATURE BLOCKS WRAPPER (matches 477px width + 10px side padding) -->
+        <tr>
+          <td align="center" style="padding:0 0 0 0;">
+            <table width="477" cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto;">
+              <!-- FEATURE BLOCK 1 -->
+              <tr>
+                <td style="padding:14px 0;">
+                  <table width="100%" cellpadding="0" cellspacing="0" border="0"
+                         style="background:#FBFBFB; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.05);">
+                    <tr>
+                      <td width="127" style="padding:9px 10px 9px 10px;">
+                        <table cellpadding="0" cellspacing="0" border="0" style="border-radius:5px; overflow:hidden;">
+                          <tr>
+                            <td>
+                              <img src="https://framerusercontent.com/images/Dvrs9PMvqZhvfsPH1F3MMTZeGQ.png?width=184&height=245"
+                                   width="107"
+                                   style="display:block; border-radius:5px;">
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                      <td style="padding:9px 10px 9px 0;">
+                        <table cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="font-family:'Recoleta', Georgia, 'Times New Roman', serif; font-size:20px; line-height:29px; color:#171917; font-weight:500; padding-bottom:9px;">
+                              Scan or type a wine label
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="font-size:12px; line-height:18px; color:#171917;">
+                              Find any wine instantly. Have the label? Take a photo. Don’t? Type the info you have and we’ll do the rest.
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
 
-<!-- FEATURE BLOCK 2 -->
-<tr>
-<td style="padding:10px 20px;">
-<table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#FBFBFB; border-radius:10px;">
-<tr>
-<td width="120" style="padding:15px;">
-<img src="https://YOUR-IMAGE-2.png" width="100">
-</td>
-<td style="padding:15px;">
-<h3 style="margin:0; font-size:20px; color:#171917;">
-Get really detailed information
-</h3>
-<p style="margin:8px 0 0 0; font-size:12px; line-height:18px; color:#171917;">
-From essential facts to deeper technical insights, explore reliable wine information that helps you choose confidently.
-</p>
-</td>
-</tr>
-</table>
-</td>
-</tr>
+              <!-- FEATURE BLOCK 2 -->
+              <tr>
+                <td style="padding:14px 0;">
+                  <table width="100%" cellpadding="0" cellspacing="0" border="0"
+                         style="background:#FBFBFB; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.05);">
+                    <tr>
+                      <td width="127" style="padding:9px 10px 9px 10px;">
+                        <img src="https://framerusercontent.com/images/xR9U0CvYU4lcesH1bCiTZ3lRE.png?width=101&height=99"
+                             width="107"
+                             style="display:block; border-radius:5px;">
+                      </td>
+                      <td style="padding:9px 10px 9px 0;">
+                        <table cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="font-family:'Recoleta', Georgia, 'Times New Roman', serif; font-size:20px; line-height:29px; color:#171917; font-weight:500; padding-bottom:9px;">
+                              Get really detailed information
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="font-size:12px; line-height:18px; color:#171917;">
+                              From essential facts to deeper technical insights, explore reliable wine information that helps you choose confidently. No crowd ratings, no AI. Just accurate and reliable wine data.
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
 
-<!-- FEATURE BLOCK 3 -->
-<tr>
-<td style="padding:10px 20px;">
-<table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#FBFBFB; border-radius:10px;">
-<tr>
-<td width="120" style="padding:15px;">
-<img src="https://YOUR-IMAGE-3.png" width="100">
-</td>
-<td style="padding:15px;">
-<h3 style="margin:0; font-size:20px; color:#171917;">
-Rate & build your taste profile
-</h3>
-<p style="margin:8px 0 0 0; font-size:12px; line-height:18px; color:#171917;">
-Your ratings are personal. Rate for yourself and build your unique flavour profile.
-</p>
-</td>
-</tr>
-</table>
-</td>
-</tr>
+              <!-- FEATURE BLOCK 3 -->
+              <tr>
+                <td style="padding:14px 0;">
+                  <table width="100%" cellpadding="0" cellspacing="0" border="0"
+                         style="background:#FBFBFB; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.05);">
+                    <tr>
+                      <td width="127" style="padding:9px 10px 9px 10px;">
+                        <img src="https://framerusercontent.com/images/uUgO9GFHjgIC2KapIIR0esd6pWU.png?width=178&height=80"
+                             width="107"
+                             style="display:block; border-radius:5px;">
+                      </td>
+                      <td style="padding:9px 10px 9px 0;">
+                        <table cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="font-family:'Recoleta', Georgia, 'Times New Roman', serif; font-size:20px; line-height:29px; color:#171917; font-weight:500; padding-bottom:9px;">
+                              Rate &amp; build your taste profile
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="font-size:12px; line-height:18px; color:#171917;">
+                              Your ratings are personal. Someone else’s opinion never affects your recommendations. Rate for yourself and build your unique flavour profile.
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
 
-<!-- FEATURE BLOCK 4 -->
-<tr>
-<td style="padding:10px 20px;">
-<table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#FBFBFB; border-radius:10px;">
-<tr>
-<td width="120" style="padding:15px;">
-<img src="https://YOUR-IMAGE-4.png" width="100">
-</td>
-<td style="padding:15px;">
-<h3 style="margin:0; font-size:20px; color:#171917;">
-Get personalised recommendations
-</h3>
-<p style="margin:8px 0 0 0; font-size:12px; line-height:18px; color:#171917;">
-Your preferences + your ratings = recommendations made specially for you.
-</p>
-</td>
-</tr>
-</table>
-</td>
-</tr>
+              <!-- FEATURE BLOCK 4 -->
+              <tr>
+                <td style="padding:14px 0;">
+                  <table width="100%" cellpadding="0" cellspacing="0" border="0"
+                         style="background:#FBFBFB; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.05);">
+                    <tr>
+                      <td width="127" style="padding:9px 10px 9px 10px;">
+                        <img src="https://framerusercontent.com/images/uAUHfvG1YTi8XNuhZN551vUrOQ.png?width=131&height=50"
+                             width="107"
+                             style="display:block; border-radius:5px;">
+                      </td>
+                      <td style="padding:9px 10px 9px 0;">
+                        <table cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td style="font-family:'Recoleta', Georgia, 'Times New Roman', serif; font-size:20px; line-height:29px; color:#171917; font-weight:500; padding-bottom:9px;">
+                              Get personalised recommendations
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="font-size:12px; line-height:18px; color:#171917;">
+                              Your preferences + your ratings = recommendations made specially for you. The more you use Swirl, the smarter it becomes.
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
 
-<!-- SECOND CTA -->
-<tr>
-<td align="center" style="padding:40px 20px;">
-<p style="font-size:14px; line-height:21px; color:#171917;">
-No more guessing.<br>
-No more drinking someone else’s favourite wine.<br>
-Start building your taste today.
-</p>
+            </table>
+          </td>
+        </tr>
 
-<a href="https://YOUR-APP-LINK.com"
-style="background:#171917; color:#ffffff; text-decoration:none; padding:14px 30px; border-radius:30px; font-size:16px; font-weight:bold; display:inline-block; margin-top:20px;">
-Get started
-</a>
+        <!-- SECOND CTA SECTION (matches 413px block) -->
+        <tr>
+          <td align="center" style="padding:40px 20px 40px 20px;">
+            <table width="413" cellpadding="0" cellspacing="0" border="0" style="text-align:center;">
+              <tr>
+                <td style="font-size:14px; line-height:21px; color:#171917; padding-bottom:28px;">
+                  No more guessing.<br>
+                  No more drinking someone else’s favourite wine.<br>
+                  Start building your taste today.
+                </td>
+              </tr>
+              <tr>
+                <td align="center">
+                  <a href="https://YOUR-APP-LINK.com"
+                     style="background:#171917; color:#ffffff; text-decoration:none; padding:15px 34px; border-radius:30px; font-size:16px; font-weight:700; display:inline-block; font-family: Inter, Arial, Helvetica, sans-serif;">
+                    Get started
+                  </a>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
 
-</td>
-</tr>
+        <!-- FOOTER (primary-900 background, 225px high in Figma) -->
+        <tr>
+          <td align="center" style="background:#3C4D4F; padding:34px 20px; color:#FBFBFB;">
 
-<!-- FOOTER -->
-<tr>
-<td align="center" style="background:#3C4D4F; padding:40px 20px; color:#FBFBFB; font-size:14px; line-height:24px;">
-<strong>Swirl</strong><br><br>
-Cheers from the Swirl team in Stockholm 🇸🇪<br>
-Having issues? hey@swirlyourwines.com<br>
-www.swirlyourwines.com - Unsubscribe
-</td>
-</tr>
+            <!-- Swirl wordmark / bar -->
+            <table cellpadding="0" cellspacing="0" border="0" style="margin-bottom:20px;">
+              <tr>
+                <td>
+                  <!-- replace with real footer logo when available -->
+                  <img src="https://framerusercontent.com/images/Cuvbujhn4mKpwfPpJ5MWbqhM.png"
+                 width="80" alt="Swirl"
+                 style="display:block; margin-bottom:35px;">
+                </td>
+              </tr>
+            </table>
 
-</table>
-</td>
-</tr>
+            <!-- Footer text -->
+            <table width="524" cellpadding="0" cellspacing="0" border="0" style="text-align:center; margin-bottom:20px;">
+              <tr>
+                <td style="font-size:14px; line-height:24px; color:#FBFBFB;">
+                  Cheers from the Swirl team in Stockholm 🇸🇪<br>
+                  Having issues? hey@swirlyourwines.com<br>
+                  www.swirlyourwines.com - Unsubscribe
+                </td>
+              </tr>
+            </table>
+
+            <!-- Social / Store icons row with 10px gap -->
+            <table cellpadding="0" cellspacing="0" border="0">
+              <tr>
+                <td style="padding-right:10px;">
+                  <img src="https://raw.githubusercontent.com/priyanka8637kumari/Email-Asset/refs/heads/main/email-assets/instagram%201.png"
+                       width="30" style="display:block;">
+                </td>
+                <td style="padding-right:10px;">
+                  <img src="https://raw.githubusercontent.com/priyanka8637kumari/Email-Asset/refs/heads/main/email-assets/tiktok%201.png"
+                       width="30" style="display:block;">
+                </td>
+                <td style="padding-right:10px;">
+                  <img src="https://raw.githubusercontent.com/priyanka8637kumari/Email-Asset/refs/heads/main/email-assets/pinterest%20copy%201.png"
+                       width="30" style="display:block;">
+                </td>
+                <td style="padding-right:10px;">
+                  <img src="https://raw.githubusercontent.com/priyanka8637kumari/Email-Asset/refs/heads/main/email-assets/appStore.png"
+                       width="29" style="display:block;">
+                </td>
+                <td>
+                  <img src="https://raw.githubusercontent.com/priyanka8637kumari/Email-Asset/refs/heads/main/email-assets/google-play%201.png"
+                       width="29" style="display:block;">
+                </td>
+              </tr>
+            </table>
+
+          </td>
+        </tr>
+
+      </table>
+    </td>
+  </tr>
 </table>
 
 </body>
