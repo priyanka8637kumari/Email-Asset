@@ -2,7 +2,77 @@
 <html>
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Welcome to Swirl</title>
+  <style type="text/css">
+    /* Reset styles */
+    body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+    table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+    img { -ms-interpolation-mode: bicubic; border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; }
+    
+    /* Mobile styles */
+    @media only screen and (max-width: 600px) {
+      .main-table {
+        width: 100% !important;
+      }
+      .content-width {
+        width: 90% !important;
+        max-width: 90% !important;
+      }
+      .phone-image {
+        width: 80% !important;
+        max-width: 280px !important;
+        height: auto !important;
+      }
+      .feature-wrapper {
+        width: 95% !important;
+      }
+      .feature-image {
+        width: 80px !important;
+        padding: 5px !important;
+      }
+      .feature-image img {
+        width: 70px !important;
+        height: auto !important;
+      }
+      .feature-text {
+        padding: 5px 8px !important;
+      }
+      .heading-text {
+        font-size: 26px !important;
+        line-height: 32px !important;
+      }
+      .subheading-text {
+        font-size: 13px !important;
+        line-height: 19px !important;
+      }
+      .feature-title {
+        font-size: 16px !important;
+        line-height: 22px !important;
+      }
+      .cta-button {
+        padding: 12px 30px !important;
+        font-size: 15px !important;
+      }
+      .social-icons {
+        padding: 5px !important;
+      }
+      .footer-width {
+        width: 95% !important;
+      }
+      .footer-text {
+        font-size: 12px !important;
+        line-height: 20px !important;
+      }
+      .mobile-padding {
+        padding: 20px 15px !important;
+      }
+      .gradient-section {
+        padding: 30px 15px 0 15px !important;
+      }
+    }
+  </style>
 </head>
 
 <body style="margin:0; padding:0; background:#ffffff; font-family: Inter, Arial, Helvetica, sans-serif;">
@@ -12,11 +82,11 @@
     <td align="center">
 
       <!-- MAIN CONTAINER (600px like Figma) -->
-      <table width="600" cellpadding="0" cellspacing="0" border="0" style="background:#ffffff;">
+      <table width="600" cellpadding="0" cellspacing="0" border="0" style="background:#ffffff;" class="main-table">
 
         <!-- TOP GRADIENT SECTION (height ~302px) -->
         <tr>
-          <td align="center" style="background: linear-gradient(360deg, #ffffff 13%, #A6C5C9 100%); padding:40px 20px 0 20px;">
+          <td align="center" style="background: linear-gradient(360deg, #ffffff 13%, #A6C5C9 100%); padding:40px 20px 0 20px;" class="gradient-section">
 
             <!-- Swirl wordmark placeholder bar at top center -->
             <table cellpadding="0" cellspacing="0" border="0" style="margin-bottom:15px;">
@@ -25,7 +95,7 @@
                   <!-- In Figma this is the small black bar; replace with logo image when available -->
                   <img src="https://framerusercontent.com/images/Mrf6vxBqiuIVPmTaKFeR631ZfY.png"
                  width="80" alt="Swirl"
-                 style="display:block; margin-bottom:35px;">
+                 style="display:block; margin-bottom:35px; max-width:100%; height:auto;">
                 </td>
               </tr>
             </table>
@@ -33,15 +103,15 @@
            
 
             <!-- Heading + subcopy (413px wide like Figma) -->
-            <table width="413" cellpadding="0" cellspacing="0" border="0" style="text-align:center;">
+            <table width="413" cellpadding="0" cellspacing="0" border="0" style="text-align:center;" class="content-width">
               <tr>
-                <td style="font-family: 'Recoleta', Georgia, 'Times New Roman', serif; font-size:30px; line-height:35px; color:#171917; font-weight:500; padding-bottom:11px;">
-                  Welcome to Swirl!
+                <td style="font-family: 'Recoleta', Georgia, 'Times New Roman', serif; font-size:30px; line-height:35px; color:#171917; font-weight:500; padding-bottom:11px;" class="heading-text">
+                  Build your collections
                 </td>
               </tr>
               <tr>
-                <td style="font-size:14px; line-height:21px; color:#171917;">
-                  Start drinking what <strong style="font-weight:700;">you</strong> love, not what <br>everyone else rates.
+                <td style="font-size:14px; line-height:21px; color:#171917;" class="subheading-text">
+                  Save every bottle you try, love, or want to explore.<br>Your personal wine collection, organised in one place.
                 </td>
               </tr>
             </table>
@@ -53,15 +123,17 @@
         <tr>
           <td align="center" style="padding:0 20px;">
             <img src="https://framerusercontent.com/images/EIOhVVMAjvwlrTLqoZGzBU8ys.png?width=287&height=475"
-                
-                 style="border-radius:15px; display:block;">
+                 class="phone-image"
+                 width="287"
+                 style="border-radius:15px; display:block; max-width:100%; height:auto;">
           </td>
         </tr>
 
         <!-- PRIMARY CTA (Scan your first bottle) -->
         <tr>
           <td align="center" style="padding:0 20px 28px 20px;">
-            <a href="https://YOUR-APP-LINK.com"
+            <a href="https://link.swirlyourwines.com/7UjXk7"
+               class="cta-button"
                style="background:#171917; color:#ffffff; text-decoration:none; padding:12px 40px; border-radius:30px; font-size:16px; font-weight:700; display:inline-block; font-family: Inter, Arial, Helvetica, sans-serif;">
               Scan your first bottle
             </a>
@@ -71,28 +143,28 @@
         <!-- FEATURE BLOCKS WRAPPER (matches 477px width + 10px side padding) -->
         <tr>
           <td align="center" style="padding:0 0 0 0;">
-            <table width="477" cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto;">
+            <table width="477" cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto;" class="feature-wrapper">
               <!-- FEATURE BLOCK 1 -->
               <tr>
                 <td style="padding:14px 0;">
                   <table width="100%" cellpadding="0" cellspacing="0" border="0"
                          style="background:#FBFBFB; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.05);">
                     <tr>
-                      <td width="127" style="padding:9px 10px 9px 10px;">
+                      <td width="127" style="padding:9px 10px 9px 10px;" class="feature-image feature-block">
                         <table cellpadding="0" cellspacing="0" border="0" style="border-radius:5px; overflow:hidden;">
                           <tr>
                             <td>
                               <img src="https://framerusercontent.com/images/Dvrs9PMvqZhvfsPH1F3MMTZeGQ.png?width=184&height=245"
                                    width="107"
-                                   style="display:block; border-radius:5px;">
+                                   style="display:block; border-radius:5px; max-width:100%; height:auto;">
                             </td>
                           </tr>
                         </table>
                       </td>
-                      <td style="padding:9px 10px 9px 0;">
+                      <td style="padding:9px 10px 9px 0;" class="feature-text feature-block">
                         <table cellpadding="0" cellspacing="0" border="0">
                           <tr>
-                            <td style="font-family:'Recoleta', Georgia, 'Times New Roman', serif; font-size:20px; line-height:29px; color:#171917; font-weight:500; padding-bottom:9px;">
+                            <td style="font-family:'Recoleta', Georgia, 'Times New Roman', serif; font-size:20px; line-height:29px; color:#171917; font-weight:500; padding-bottom:9px;" class="feature-title">
                               Scan or type a wine label
                             </td>
                           </tr>
@@ -114,15 +186,15 @@
                   <table width="100%" cellpadding="0" cellspacing="0" border="0"
                          style="background:#FBFBFB; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.05);">
                     <tr>
-                      <td width="127" style="padding:9px 10px 9px 10px;">
+                      <td width="127" style="padding:9px 10px 9px 10px;" class="feature-image feature-block">
                         <img src="https://framerusercontent.com/images/xR9U0CvYU4lcesH1bCiTZ3lRE.png?width=101&height=99"
                              width="107"
-                             style="display:block; border-radius:5px;">
+                             style="display:block; border-radius:5px; max-width:100%; height:auto;">
                       </td>
-                      <td style="padding:9px 10px 9px 0;">
+                      <td style="padding:9px 10px 9px 0;" class="feature-text feature-block">
                         <table cellpadding="0" cellspacing="0" border="0">
                           <tr>
-                            <td style="font-family:'Recoleta', Georgia, 'Times New Roman', serif; font-size:20px; line-height:29px; color:#171917; font-weight:500; padding-bottom:9px;">
+                            <td style="font-family:'Recoleta', Georgia, 'Times New Roman', serif; font-size:20px; line-height:29px; color:#171917; font-weight:500; padding-bottom:9px;" class="feature-title">
                               Get really detailed information
                             </td>
                           </tr>
@@ -144,15 +216,15 @@
                   <table width="100%" cellpadding="0" cellspacing="0" border="0"
                          style="background:#FBFBFB; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.05);">
                     <tr>
-                      <td width="127" style="padding:9px 10px 9px 10px;">
+                      <td width="127" style="padding:9px 10px 9px 10px;" class="feature-image feature-block">
                         <img src="https://framerusercontent.com/images/uUgO9GFHjgIC2KapIIR0esd6pWU.png?width=178&height=80"
                              width="107"
-                             style="display:block; border-radius:5px;">
+                             style="display:block; border-radius:5px; max-width:100%; height:auto;">
                       </td>
-                      <td style="padding:9px 10px 9px 0;">
+                      <td style="padding:9px 10px 9px 0;" class="feature-text feature-block">
                         <table cellpadding="0" cellspacing="0" border="0">
                           <tr>
-                            <td style="font-family:'Recoleta', Georgia, 'Times New Roman', serif; font-size:20px; line-height:29px; color:#171917; font-weight:500; padding-bottom:9px;">
+                            <td style="font-family:'Recoleta', Georgia, 'Times New Roman', serif; font-size:20px; line-height:29px; color:#171917; font-weight:500; padding-bottom:9px;" class="feature-title">
                               Rate &amp; build your taste profile
                             </td>
                           </tr>
@@ -174,21 +246,21 @@
                   <table width="100%" cellpadding="0" cellspacing="0" border="0"
                          style="background:#FBFBFB; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.05);">
                     <tr>
-                      <td width="127" style="padding:9px 10px 9px 10px;">
+                      <td width="127" style="padding:9px 10px 9px 10px;" class="feature-image feature-block">
                         <img src="https://framerusercontent.com/images/uAUHfvG1YTi8XNuhZN551vUrOQ.png?width=131&height=50"
                              width="107"
-                             style="display:block; border-radius:5px;">
+                             style="display:block; border-radius:5px; max-width:100%; height:auto;">
                       </td>
-                      <td style="padding:9px 10px 9px 0;">
+                      <td style="padding:9px 10px 9px 0;" class="feature-text feature-block">
                         <table cellpadding="0" cellspacing="0" border="0">
                           <tr>
-                            <td style="font-family:'Recoleta', Georgia, 'Times New Roman', serif; font-size:20px; line-height:29px; color:#171917; font-weight:500; padding-bottom:9px;">
-                              Get personalised recommendations
+                            <td style="font-family:'Recoleta', Georgia, 'Times New Roman', serif; font-size:20px; line-height:29px; color:#171917; font-weight:500; padding-bottom:9px;" class="feature-title">
+                              Personalised recommendations
                             </td>
                           </tr>
                           <tr>
                             <td style="font-size:12px; line-height:18px; color:#171917;">
-                              Your preferences + your ratings = recommendations made specially for you. <br> The more you use Swirl, the smarter it becomes.
+                              Your preferences + your ratings = recommendations made specially for you.The more you use Swirl, the smarter it becomes.
                             </td>
                           </tr>
                         </table>
@@ -204,10 +276,10 @@
 
         <!-- SECOND CTA SECTION (matches 413px block) -->
         <tr>
-          <td align="center" style="padding:40px 20px 40px 20px;">
-            <table width="413" cellpadding="0" cellspacing="0" border="0" style="text-align:center;">
+          <td align="center" style="padding:40px 20px 40px 20px;" class="mobile-padding">
+            <table width="413" cellpadding="0" cellspacing="0" border="0" style="text-align:center;" class="content-width">
               <tr>
-                <td style="font-size:14px; line-height:21px; color:#171917; padding-bottom:28px;">
+                <td style="font-size:14px; line-height:21px; color:#171917; padding-bottom:28px;" class="subheading-text">
                   No more guessing.<br>
                   No more drinking someone else’s favourite wine.<br>
                   Start building your taste today.
@@ -215,7 +287,8 @@
               </tr>
               <tr>
                 <td align="center">
-                  <a href="https://YOUR-APP-LINK.com"
+                  <a href="https://link.swirlyourwines.com/7UjXk7"
+                     class="cta-button"
                      style="background:#171917; color:#ffffff; text-decoration:none; padding:12px 40px; border-radius:30px; font-size:16px; font-weight:700; display:inline-block; font-family: Inter, Arial, Helvetica, sans-serif;">
                     Get started
                   </a>
@@ -227,7 +300,7 @@
 
         <!-- FOOTER (primary-900 background, 225px high in Figma) -->
         <tr>
-          <td align="center" style="background:#3C4D4F; padding:34px 20px; color:#FBFBFB;">
+          <td align="center" style="background:#3C4D4F; padding:34px 20px; color:#FBFBFB;" class="mobile-padding">
 
             <!-- Swirl wordmark / bar -->
             <table cellpadding="0" cellspacing="0" border="0" style="margin-bottom:20px;">
@@ -236,18 +309,18 @@
                   <!-- replace with real footer logo when available -->
                   <img src="https://framerusercontent.com/images/Cuvbujhn4mKpwfPpJ5MWbqhM.png"
                  width="80" alt="Swirl"
-                 style="display:block; margin-bottom:15px;">
+                 style="display:block; margin-bottom:15px; max-width:100%; height:auto;">
                 </td>
               </tr>
             </table>
 
             <!-- Footer text -->
-            <table width="524" cellpadding="0" cellspacing="0" border="0" style="text-align:center; margin-bottom:20px;">
+            <table width="524" cellpadding="0" cellspacing="0" border="0" style="text-align:center; margin-bottom:20px;" class="footer-width">
               <tr>
-                <td style="font-size:14px; line-height:24px; color:#FBFBFB;">
+                <td style="font-size:14px; line-height:24px; color:#FBFBFB;" class="footer-text">
                   Cheers from the Swirl team in Stockholm 🇸🇪<br>
-                  Having issues? hey@swirlyourwines.com<br>
-                  www.swirlyourwines.com - Unsubscribe
+                  Having issues? <a href="mailto:hey@swirlyourwines.com" style="color:#ffffff; text-decoration:underline;">hey@swirlyourwines.com</a><br>
+                  <a href="https://www.swirlyourwines.com" style="color:#ffffff; text-decoration:underline;">www.swirlyourwines.com</a> - <a href="#" style="color:#ffffff; text-decoration:underline;">Unsubscribe</a>
                 </td>
               </tr>
             </table>
@@ -255,25 +328,25 @@
             <!-- Social / Store icons row with 10px gap -->
             <table cellpadding="0" cellspacing="0" border="0">
               <tr>
-                <td style="padding-right:10px;">
+                <td style="padding-right:10px;" class="social-icons">
                   <img src="https://raw.githubusercontent.com/priyanka8637kumari/Email-Asset/refs/heads/main/email-assets/instagram%201.png"
-                       width="30" style="display:block;">
+                       width="30" style="display:block; max-width:100%; height:auto;">
                 </td>
-                <td style="padding-right:10px;">
+                <td style="padding-right:10px;" class="social-icons">
                   <img src="https://raw.githubusercontent.com/priyanka8637kumari/Email-Asset/refs/heads/main/email-assets/tiktok%201.png"
-                       width="30" style="display:block;">
+                       width="30" style="display:block; max-width:100%; height:auto;">
                 </td>
-                <td style="padding-right:10px;">
+                <td style="padding-right:10px;" class="social-icons">
                   <img src="https://raw.githubusercontent.com/priyanka8637kumari/Email-Asset/refs/heads/main/email-assets/pinterest%20copy%201.png"
-                       width="30" style="display:block;">
+                       width="30" style="display:block; max-width:100%; height:auto;">
                 </td>
-                <td style="padding-right:10px;">
+                <td style="padding-right:10px;" class="social-icons">
                   <img src="https://raw.githubusercontent.com/priyanka8637kumari/Email-Asset/refs/heads/main/email-assets/appStore.png"
-                       width="29" style="display:block;">
+                       width="29" style="display:block; max-width:100%; height:auto;">
                 </td>
-                <td>
+                <td class="social-icons">
                   <img src="https://raw.githubusercontent.com/priyanka8637kumari/Email-Asset/refs/heads/main/email-assets/googlePlay.png"
-                       width="29" style="display:block;">
+                       width="29" style="display:block; max-width:100%; height:auto;">
                 </td>
               </tr>
             </table>
