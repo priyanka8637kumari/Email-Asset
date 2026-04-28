@@ -20,6 +20,14 @@
         width: 90% !important;
         max-width: 90% !important;
       }
+      /* Hero / overlays */
+      .hero-table { width:100% !important; }
+      .hero-cell { padding-bottom:0px !important; }
+
+      /* Phone: overlap hero using negative margin */
+      .phone-overlay { position:relative !important; bottom:auto !important; left:auto !important; transform:none !important; display:block !important; margin:-30px auto 10px auto !important; z-index:3 !important; }
+      .phone-overlay img { display:block !important; margin:0 auto !important; width:220px !important; max-width:85% !important; height:auto !important; border-radius:12px !important; }
+
       .phone-image {
         width: 80% !important;
         max-width: 280px !important;
@@ -71,6 +79,54 @@
       .gradient-section {
         padding: 30px 15px 0 15px !important;
       }
+      .content-block {
+        padding: 20px 15px !important;
+      }
+    }
+
+    /* Dark mode support */
+    @media (prefers-color-scheme: dark) {
+      /* Main background - keep it light for readability */
+      body, .main-table {
+        background: #ffffff !important;
+      }
+      
+      /* Ensure gradient section stays visible */
+      .gradient-section {
+        background: linear-gradient(360deg, #ffffff 13%, #A6C5C9 100%) !important;
+      }
+      
+      /* Keep text colors as designed for contrast */
+      .dark-mode-text {
+        color: #171917 !important;
+      }
+      
+      /* Feature blocks - ensure they stay visible */
+      .feature-block {
+        background-color: #FBFBFB !important;
+      }
+      
+      /* CTA buttons - maintain contrast */
+      .cta-button {
+        background: #171917 !important;
+        color: #ffffff !important;
+      }
+      
+      /* Footer - already has dark background */
+      .dark-mode-footer {
+        background: #3C4D4F !important;
+        color: #FBFBFB !important;
+      }
+      
+      /* Links in footer */
+      .dark-mode-footer a {
+        color: #ffffff !important;
+      }
+      
+      /* Ensure images display properly */
+      img {
+        opacity: 1 !important;
+      }
     }
   </style>
 </head>
@@ -84,34 +140,18 @@
       <!-- MAIN CONTAINER (600px like Figma) -->
       <table width="600" cellpadding="0" cellspacing="0" border="0" style="background:#ffffff;" class="main-table">
 
-        <!-- TOP GRADIENT SECTION (height ~302px) -->
+        <!-- HERO BACKGROUND + HERO IMAGE (NOW CONTAINS LOGO) -->
         <tr>
-          <td align="center" style="background: linear-gradient(360deg, #ffffff 13%, #A6C5C9 100%); padding:40px 20px 0 20px;" class="gradient-section">
+          <td align="center" style="background:#A6C5C9; padding:0; position:relative;">
 
-            <!-- Swirl wordmark placeholder bar at top center -->
-            <table cellpadding="0" cellspacing="0" border="0" style="margin-bottom:15px;">
+            <!-- HERO IMAGE FULL WIDTH -->
+            <table width="600" cellpadding="0" cellspacing="0" border="0" class="hero-table">
               <tr>
-                <td>
-                  <!-- In Figma this is the small black bar; replace with logo image when available -->
-                  <img src="https://framerusercontent.com/images/Mrf6vxBqiuIVPmTaKFeR631ZfY.png"
-                 width="80" alt="Swirl"
-                 style="display:block; margin-bottom:35px; max-width:100%; height:auto;">
-                </td>
-              </tr>
-            </table>
-
-           
-
-            <!-- Heading + subcopy (413px wide like Figma) -->
-            <table width="413" cellpadding="0" cellspacing="0" border="0" style="text-align:center;" class="content-width">
-              <tr>
-                <td style="font-family: 'Recoleta', Georgia, 'Times New Roman', serif; font-size:30px; line-height:35px; color:#171917; font-weight:500; padding-bottom:11px;" class="heading-text">
-                  Rate to get truly personalised recommendations
-                </td>
-              </tr>
-              <tr>
-                <td style="font-size:14px; line-height:21px; color:#171917;" class="subheading-text">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                <td align="center" style="padding-bottom:0px;" class="hero-cell">
+                  <img src="https://swirl-email-images.s3.eu-west-1.amazonaws.com/hero-%20recommendations.png"
+                       width="600"
+                       alt="Welcome to Swirl"
+                       style="display:block; max-width:100%; height:auto;">
                 </td>
               </tr>
             </table>
@@ -119,25 +159,35 @@
           </td>
         </tr>
 
-        <!-- PHONE IMAGE (positioned roughly like Figma) -->
+        <!-- PHONE OVERLAY (MOVED OUT TO PREVENT GRADIENT STRETCH) -->
         <tr>
-          <td align="center" style="padding:0 20px;">
-            <img src="https://swirl-email-images.s3.eu-west-1.amazonaws.com/collections_phoneImage.png"
-                 class="phone-image"
-                 width="287"
-                 style="border-radius:15px; display:block; max-width:100%; height:auto;">
+          <td align="center" style="padding:0; background:#ffffff;">
+            <div class="phone-overlay" style="position:relative; margin-top:-40px; z-index:3;">
+              <img src="https://swirl-email-images.s3.eu-west-1.amazonaws.com/collections_phoneImage.png"
+                   width="287" alt="Phone"
+                   style="border-radius:15px; display:inline-block; max-width:287px; height:auto;">
+            </div>
           </td>
         </tr>
-
-        
 
         <!-- CONTENT SECTION -->
         <tr>
           <td align="center" style="padding:0 20px 28px 20px;">
             <table width="477" cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto;" class="feature-wrapper">
               <tr>
-                <td style="text-align:center; color:#171917; font-size:14px; font-family: Inter, Arial, Helvetica, sans-serif; font-weight:400; line-height:21px;">
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat"
+                <td style="background:#F4F8F8; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.05); padding:28px 24px;" class="content-block">
+                  <table cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                      <td style="font-size:14px; font-family: Inter, Arial, Helvetica, sans-serif; line-height:21px; color:#171917;">
+                        <strong style="font-weight:700;">To get the best results, try to rate everything you drink:</strong><br>
+                        • Both good and bad ratings help Swirl understand your taste.<br>
+                        • You can also add notes to go deeper.<br>
+                        • Write what you liked, what you ate with it, or what felt different.<br>
+                        <br>
+                        The more details you add, the smarter the system becomes.
+                      </td>
+                    </tr>
+                  </table>
                 </td>
               </tr>
             </table>
@@ -147,14 +197,18 @@
         <!-- SECOND CTA SECTION (matches 413px block) -->
         <tr>
           <td align="center" style="padding:40px 20px 40px 20px;" class="mobile-padding">
-            <table width="413" cellpadding="0" cellspacing="0" border="0" style="text-align:center;" class="content-width">
-                
+            <table width="499px" cellpadding="0" cellspacing="0" border="0" style="text-align:center;" class="content-width">
+              <tr>
+                <td style="font-size:14px; line-height:21px; color:#171917; padding-bottom:28px;" class="subheading-text">
+                  Build your profile.<br> Train your taste.<br>Let Swirl find the right bottles for you.
+                </td>
+              </tr>
               <tr>
                 <td align="center">
                   <a href="https://link.swirlyourwines.com/7UjXk7"
                      class="cta-button"
                      style="background:#171917; color:#ffffff; text-decoration:none; padding:12px 40px; border-radius:30px; font-size:16px; font-weight:700; display:inline-block; font-family: Inter, Arial, Helvetica, sans-serif;">
-                    CTA
+                    Rate your next wine
                   </a>
                 </td>
               </tr>
