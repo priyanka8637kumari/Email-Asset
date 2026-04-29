@@ -49,11 +49,11 @@
       }
       .heading-text {
         font-size: 26px !important;
-        line-height: 32px !important;
+        line-height: 30px !important;
       }
       .subheading-text {
-        font-size: 13px !important;
-        line-height: 19px !important;
+        font-size: 14px !important;
+        line-height: 18px !important;
       }
       .feature-title {
         font-size: 16px !important;
@@ -66,64 +66,72 @@
       .social-icons {
         padding: 5px !important;
       }
+      .social-icons img {
+        width: 24px !important;
+      }
+      .footer-section {
+        padding: 30px 15px !important;
+      }
       .footer-width {
-        width: 95% !important;
+        width: 90% !important;
       }
       .footer-text {
-        font-size: 12px !important;
-        line-height: 20px !important;
+        font-size: 14px !important;
+        line-height: 18px !important;
       }
       .mobile-padding {
-        padding: 20px 15px !important;
-      }
-      .gradient-section {
-        padding: 30px 15px 0 15px !important;
-      }
-      .content-block {
         padding: 20px 15px !important;
       }
     }
 
     /* Dark mode support */
     @media (prefers-color-scheme: dark) {
-      /* Main background - keep it light for readability */
       body, .main-table {
         background: #ffffff !important;
       }
       
-      /* Ensure gradient section stays visible */
-      .gradient-section {
-        background: linear-gradient(360deg, #ffffff 13%, #A6C5C9 100%) !important;
+      /* Header section */
+      .header-section {
+        background: #CCDEE0 !important;
       }
       
-      /* Keep text colors as designed for contrast */
-      .dark-mode-text {
+      /* Text colors */
+      .dark-text {
         color: #171917 !important;
       }
       
-      /* Feature blocks - ensure they stay visible */
+      /* Feature blocks and cards */
       .feature-block {
         background-color: #FBFBFB !important;
       }
       
-      /* CTA buttons - maintain contrast */
+      .card-light {
+        background: #ffffff !important;
+        background-color: #ffffff !important;
+        color: #171917 !important;
+      }
+      
+      .card-light td {
+        color: #171917 !important;
+      }
+      
+      /* CTA buttons */
       .cta-button {
         background: #171917 !important;
         color: #ffffff !important;
       }
       
-      /* Footer - already has dark background */
-      .dark-mode-footer {
+      /* Footer */
+      .footer-section {
         background: #3C4D4F !important;
         color: #FBFBFB !important;
       }
-      
-      /* Links in footer */
-      .dark-mode-footer a {
+
+      .footer-section a {
         color: #ffffff !important;
       }
       
-      /* Ensure images display properly */
+      /* Images */
       img {
         opacity: 1 !important;
       }
@@ -140,18 +148,31 @@
       <!-- MAIN CONTAINER (600px like Figma) -->
       <table width="600" cellpadding="0" cellspacing="0" border="0" style="background:#ffffff;" class="main-table">
 
-        <!-- HERO BACKGROUND + HERO IMAGE (NOW CONTAINS LOGO) -->
+        <!-- HEADER SECTION: Solid color background with logo, heading, subheading -->
         <tr>
-          <td align="center" style="background:#A6C5C9; padding:0; position:relative;">
+          <td align="center" style="background: #CCDEE0; padding:40px 20px 40px 20px;" class="header-section">
 
-            <!-- HERO IMAGE FULL WIDTH -->
-            <table width="600" cellpadding="0" cellspacing="0" border="0" class="hero-table">
+            <!-- Logo -->
+            <table cellpadding="0" cellspacing="0" border="0" style="margin-bottom:25px;">
               <tr>
-                <td align="center" style="padding-bottom:0px;" class="hero-cell">
-                  <img src="https://swirl-email-images.s3.eu-west-1.amazonaws.com/hero-%20recommendations.png"
-                       width="600"
-                       alt="Welcome to Swirl"
+                <td align="center">
+                  <img src="https://framerusercontent.com/images/Mrf6vxBqiuIVPmTaKFeR631ZfY.png"
+                       width="80" alt="Swirl"
                        style="display:block; max-width:100%; height:auto;">
+                </td>
+              </tr>
+            </table>
+
+            <!-- Heading + Subheading (413px wide) -->
+            <table width="413" cellpadding="0" cellspacing="0" border="0" style="text-align:center;" class="content-width">
+              <tr>
+                <td style="font-family: 'Recoleta', Georgia, 'Times New Roman', serif; font-size:32px; line-height:35px; color:#171917; font-weight:500; padding-bottom:11px;" class="heading-text dark-text">
+                  Rate to get real personalised recommendations
+                </td>
+              </tr>
+              <tr>
+                <td style="font-size:16px; line-height:21px; color:#171917;" class="subheading-text dark-text">
+                  Swirl doesn’t recommend wines based on public ratings. It learns from you. Every time you rate a wine, your flavour profile becomes more accurate. And the more accurate your profile is, the better your recommendations will be.
                 </td>
               </tr>
             </table>
@@ -159,24 +180,24 @@
           </td>
         </tr>
 
-        <!-- PHONE OVERLAY (MOVED OUT TO PREVENT GRADIENT STRETCH) -->
+        <!-- PHONE IMAGE SECTION -->
         <tr>
-          <td align="center" style="padding:0; background:#ffffff;">
-            <div class="phone-overlay" style="position:relative; margin-top:-40px; z-index:3;">
-              <img src="https://swirl-email-images.s3.eu-west-1.amazonaws.com/collections_phoneImage.png"
-                   width="287" alt="Phone"
-                   style="border-radius:15px; display:inline-block; max-width:287px; height:auto;">
-            </div>
+          <td align="center" style="padding:0; background:#ffffff;" class="phone-section">
+            <img src="https://swirl-email-images.s3.eu-west-1.amazonaws.com/collections_phoneImage.png"
+                 class="phone-image"
+                 width="287"
+                 style="border-radius:15px; display:block; max-width:100%; height:auto;">
           </td>
         </tr>
 
         <!-- CONTENT SECTION -->
         <tr>
-          <td align="center" style="padding:0 20px 28px 20px;">
+          <td align="center" style="padding:0;">
             <table width="477" cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto;" class="feature-wrapper">
-              <tr>
-                <td style="background:#F4F8F8; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.05); padding:28px 24px;" class="content-block">
-                  <table cellpadding="0" cellspacing="0" border="0">
+             <tr>
+                 <td style="background:#F4F8F8; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.05); padding:28px 24px;">
+                  <table width="100%" cellpadding="0" cellspacing="0" border="0"
+                        >
                     <tr>
                       <td style="font-size:14px; font-family: Inter, Arial, Helvetica, sans-serif; line-height:21px; color:#171917;">
                         <strong style="font-weight:700;">To get the best results, try to rate everything you drink:</strong><br>
@@ -197,37 +218,44 @@
         <!-- SECOND CTA SECTION (matches 413px block) -->
         <tr>
           <td align="center" style="padding:40px 20px 40px 20px;" class="mobile-padding">
-            <table width="499px" cellpadding="0" cellspacing="0" border="0" style="text-align:center;" class="content-width">
+            <table width="413" cellpadding="0" cellspacing="0" border="0" style="text-align:center;" class="content-width">
               <tr>
-                <td style="font-size:14px; line-height:21px; color:#171917; padding-bottom:28px;" class="subheading-text">
-                  Build your profile.<br> Train your taste.<br>Let Swirl find the right bottles for you.
-                </td>
-              </tr>
-              <tr>
-                <td align="center">
-                  <a href="https://link.swirlyourwines.com/7UjXk7"
-                     class="cta-button"
-                     style="background:#171917; color:#ffffff; text-decoration:none; padding:12px 40px; border-radius:30px; font-size:16px; font-weight:700; display:inline-block; font-family: Inter, Arial, Helvetica, sans-serif;">
-                    Rate your next wine
-                  </a>
+                <td class="card-light"
+                    style="background:#ffffff; background-color:#ffffff; padding:16px 20px 22px 20px; border-radius:10px;">
+                  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                      <td class="subheading-text"
+                          style="font-size:16px; line-height:21px; color:#171917; padding-bottom:20px;">
+                        Build your profile.<br>Train your taste.<br>Let Swirl find the right bottles for you.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td align="center">
+                        <a href="https://link.swirlyourwines.com/7UjXk7"
+                           class="cta-button"
+                           style="background:#171917; color:#ffffff; text-decoration:none; padding:12px 40px; border-radius:30px; font-size:16px; font-weight:700; display:inline-block; font-family: Inter, Arial, Helvetica, sans-serif;">
+                          Rate your next wine
+                        </a>
+                      </td>
+                    </tr>
+                  </table>
                 </td>
               </tr>
             </table>
           </td>
         </tr>
 
-        <!-- FOOTER (primary-900 background, 225px high in Figma) -->
+        <!-- FOOTER -->
         <tr>
-          <td align="center" style="background:#3C4D4F; padding:34px 20px; color:#FBFBFB;" class="mobile-padding">
+          <td align="center" style="background:#3C4D4F; padding:34px 20px; color:#FBFBFB;" class="mobile-padding footer-section">
 
-            <!-- Swirl wordmark / bar -->
+            <!-- Footer logo -->
             <table cellpadding="0" cellspacing="0" border="0" style="margin-bottom:20px;">
               <tr>
                 <td>
-                  <!-- replace with real footer logo when available -->
                   <img src="https://framerusercontent.com/images/Cuvbujhn4mKpwfPpJ5MWbqhM.png"
-                 width="80" alt="Swirl"
-                 style="display:block; margin-bottom:15px; max-width:100%; height:auto;">
+                       width="80" alt="Swirl"
+                       style="display:block; margin-bottom:15px; max-width:100%; height:auto;">
                 </td>
               </tr>
             </table>
@@ -235,36 +263,46 @@
             <!-- Footer text -->
             <table width="524" cellpadding="0" cellspacing="0" border="0" style="text-align:center; margin-bottom:20px;" class="footer-width">
               <tr>
-                <td style="font-size:14px; line-height:24px; color:#FBFBFB;" class="footer-text">
+                <td class="footer-text" style="font-size:16px; line-height:24px; color:#FBFBFB;">
                   Cheers from the Swirl team in Stockholm 🇸🇪<br>
                   Having issues? <a href="mailto:hey@swirlyourwines.com" style="color:#ffffff; text-decoration:underline;">hey@swirlyourwines.com</a><br>
-                  <a href="https://www.swirlyourwines.com" style="color:#ffffff; text-decoration:underline;">www.swirlyourwines.com</a> - <a href="#" style="color:#ffffff; text-decoration:underline;">Unsubscribe</a>
+                  <a href="https://www.swirlyourwines.com" style="color:#ffffff; text-decoration:underline;">www.swirlyourwines.com</a> - <a href="{{unsubscribe_url}}" style="color:#ffffff; text-decoration:underline;">Unsubscribe</a>
                 </td>
               </tr>
             </table>
 
-            <!-- Social / Store icons row with 10px gap -->
+            <!-- Social / Store icons -->
             <table cellpadding="0" cellspacing="0" border="0">
               <tr>
                 <td style="padding-right:10px;" class="social-icons">
-                  <img src="https://raw.githubusercontent.com/priyanka8637kumari/Email-Asset/refs/heads/main/email-assets/instagram%201.png"
-                       width="30" style="display:block; max-width:100%; height:auto;">
+                  <a href="https://www.instagram.com/swirlyourwines/" target="_blank" style="display:block;">
+                    <img src="https://swirl-email-images.s3.eu-west-1.amazonaws.com/instagram.png"
+                         width="30" style="display:block; max-width:100%; height:auto;" alt="Instagram">
+                  </a>
                 </td>
                 <td style="padding-right:10px;" class="social-icons">
-                  <img src="https://raw.githubusercontent.com/priyanka8637kumari/Email-Asset/refs/heads/main/email-assets/tiktok%201.png"
-                       width="30" style="display:block; max-width:100%; height:auto;">
+                  <a href="https://www.tiktok.com/@swirlyourwines" target="_blank" style="display:block;">
+                    <img src="https://swirl-email-images.s3.eu-west-1.amazonaws.com/tiktok.png"
+                         width="30" style="display:block; max-width:100%; height:auto;" alt="TikTok">
+                  </a>
                 </td>
                 <td style="padding-right:10px;" class="social-icons">
-                  <img src="https://raw.githubusercontent.com/priyanka8637kumari/Email-Asset/refs/heads/main/email-assets/pinterest%20copy%201.png"
-                       width="30" style="display:block; max-width:100%; height:auto;">
+                  <a href="https://se.pinterest.com/swirlyourwines/" target="_blank" style="display:block;">
+                    <img src="https://swirl-email-images.s3.eu-west-1.amazonaws.com/pinterest.png"
+                         width="30" style="display:block; max-width:100%; height:auto;" alt="Pinterest">
+                  </a>
                 </td>
                 <td style="padding-right:10px;" class="social-icons">
-                  <img src="https://raw.githubusercontent.com/priyanka8637kumari/Email-Asset/refs/heads/main/email-assets/appStore.png"
-                       width="29" style="display:block; max-width:100%; height:auto;">
+                  <a href="https://apps.apple.com/se/app/swirl-your-wines/id6670340798?l=en-GB" target="_blank" style="display:block;">
+                    <img src="https://swirl-email-images.s3.eu-west-1.amazonaws.com/app_store.png"
+                         width="29" style="display:block; max-width:100%; height:auto;" alt="App Store">
+                  </a>
                 </td>
                 <td class="social-icons">
-                  <img src="https://raw.githubusercontent.com/priyanka8637kumari/Email-Asset/refs/heads/main/email-assets/googlePlay.png"
-                       width="29" style="display:block; max-width:100%; height:auto;">
+                  <a href="https://play.google.com/store/apps/details?id=com.swirl.yourwines&hl=en" target="_blank" style="display:block;">
+                    <img src="https://swirl-email-images.s3.eu-west-1.amazonaws.com/google_play.png"
+                         width="29" style="display:block; max-width:100%; height:auto;" alt="Google Play">
+                  </a>
                 </td>
               </tr>
             </table>
